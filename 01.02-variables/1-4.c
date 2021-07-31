@@ -4,7 +4,7 @@ int main() {
     float fahr, celsius;
     float lower, upper, step;
 
-    lower = -40;   /* lower limit of temperature scale */
+    lower = -40; /* lower limit of temperature scale */
     upper = 120; /* upper limit */
     step = 20;   /* step size */
 

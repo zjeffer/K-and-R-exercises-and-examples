@@ -1,27 +1,26 @@
 /* count digits, white spaces, ohers*/
 #include <stdio.h>
 
-int main(void)
-{
-  int c, i, nwhite, nother;
-  int ndigit[10];
+int main(void) {
+    int c, i, nwhite, nother;
+    int ndigit[10];
 
-  nwhite = nother = 0;
-  for (i = 0; i <= 9; i++)
-    ndigit[i] = 0;
+    nwhite = nother = 0;
+    for (i = 0; i <= 9; i++)
+        ndigit[i] = 0;
 
-  while ((c=getchar()) != EOF)
-    if (c >= '0' && c <= '9')
-      ++ndigit[c-'0'];
-    else if ((c == ' ') || (c == '\t') || (c =='\n'))
-      ++nwhite;
-    else
-      ++nother;
+    while ((c = getchar()) != EOF)
+        if (c >= '0' && c <= '9')
+            ++ndigit[c - '0'];
+        else if ((c == ' ') || (c == '\t') || (c == '\n'))
+            ++nwhite;
+        else
+            ++nother;
 
-  printf("digits =");
-  for (i = 0; i <= 9; ++i)
-    printf(" %d", ndigit[i]);
-  printf(", white space = %d, other = %d\n", nwhite, nother);
-  
-  return 0;
+    printf("digits =");
+    for (i = 0; i <= 9; ++i)
+        printf(" %d", ndigit[i]);
+    printf(", white space = %d, other = %d\n", nwhite, nother);
+
+    return 0;
 }

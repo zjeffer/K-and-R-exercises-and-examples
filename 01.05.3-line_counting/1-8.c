@@ -17,7 +17,7 @@ int main() {
             case ' ':
                 ++blanks;
                 break;
-            default:    
+            default:
                 /* ignore other characters */
                 break;
         }
