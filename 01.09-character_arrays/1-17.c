@@ -1,10 +1,12 @@
+/* Exercise 1-17. Write a program to print all input lines that are longer than 80 characters. */
+
 /* Reads a set of text lines and prints the longest one. */
 #include <stdio.h>
 
 #define MAXLINE 1000
+#define LIMIT 80
 
 int readline(char s[], int lim);
-void copy(char to[], char from[]);
 
 int main(void) {
     int len;                // current line length
@@ -12,15 +14,13 @@ int main(void) {
     char line[MAXLINE];     // current input line
     char longest[MAXLINE];  // longest line saved here
 
+	int c;
+
     max = 0;
     while ((len = readline(line, MAXLINE)) > 0) {
-        if (len > max) {
-            max = len;
-            copy(longest, line);
-        }
-    }
-    if (max > 0) {  // there was a line
-        printf("%s", longest);
+		if (len > LIMIT){
+			printf("%s", line);
+		}
     }
     return 0;
 }
@@ -40,12 +40,3 @@ int readline(char s[], int lim) {
     return i;
 }
 
-/* copy: copy 'from' into 'to'; assume to is big enough */
-void copy(char to[], char from[]) {
-    int i;
-
-    i = 0;
-    while ((to[i] = from[i]) != '\0') {
-        ++i;
-    }
-}
