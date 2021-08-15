@@ -8,11 +8,7 @@ Each _dir_ contains only the code from the specific chapter.
 
 Each example is prefixed with `ex`.
 
-Each exercise is prefixed with the _exercise number_ and `e`.
-
-Some of the answers are inspiered or copied from [clc-wiki](http://clc-wiki.net/wiki/K&R2_solutions).
-
-My code is indented GNU style while the foreign code is indented K&R style.
+Each exercise is in a separate file, named after the exercise number. (`1-20.c` for exercise 1.20)
 
 ### Compiling
 
